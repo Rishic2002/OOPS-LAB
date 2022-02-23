@@ -1,0 +1,39 @@
+//Q3 Rishi Chhabra
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+
+class POWER     
+{
+public:
+    int n;
+    double m,result=1;
+void raise(double m,int n)
+    {
+        for(int i=1;i<=n;i++)
+            {
+                result=result*m;
+            }
+        
+    }
+    void display()
+    {
+        cout<<"RESULT IS "<<result;
+    }
+    
+};
+
+int main()
+{   POWER A;
+    double m;
+    int n;
+    cout<<"M and N is"<<endl;
+    cin>>m;
+    cin>>n;
+    A.raise(m,n);
+    A.display();
+    
+    return 0;
+}
