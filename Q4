@@ -1,0 +1,50 @@
+//Q4
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+
+class POWER     
+{
+public:
+    int n;
+    int m;
+    int result=1;
+  void raise(int m,int n)
+    {
+        for(int i=1;i<=n;i++)
+            {
+                result=result*m;
+            }
+        display();
+    }
+    POWER (int m,int n)      //CONSTRUCTOR 1
+    {  
+        raise(m, n);
+        
+    }
+    POWER (int m)            //CONSTRUCTOR 2
+    {    
+        const int n=2;
+        raise(m, n);
+        
+    }
+    void display()
+    {
+        cout<<"RESULT IS "<<result;
+    }
+    
+};
+
+int main()        
+{        
+    
+    int m;
+    int n;
+    cout<<"M and N is"<<endl;
+    cin>>m;
+    //cin>>n;
+    POWER A(m);
+    return 0;
+}
