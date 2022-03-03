@@ -1,1 +1,42 @@
+//Q1
+#include <iostream>
 
+using namespace std;
+
+
+void ENTER(int m[200][200],int r,int c)
+{   	cout<<"ENTER THE MATRIX"<<endl;
+	for (int i=0;i<r;i++)
+		{  
+			  for(int j=0;j<c;j++)
+				{
+					cin>>m[i][j];
+				}
+        }
+	
+}
+void DISPLAY (int m[200][200],int r,int c)
+{  
+	cout<<" THE MATRIX IS"<<endl;
+	
+	for (int i=0;i<r;i++)
+		{  
+			for(int j=0;j<c;j++)
+				{
+					cout<<m[i][j];
+				}
+			cout<<endl;
+			
+		}
+	
+}
+int main()
+
+{
+	int r,c,m[200][200];
+	cout<<"ENTER ROWS AND COLUMNS OF THE MATRIX"<<endl;
+	cin>>r>>c;
+	
+  ENTER(m,r,c);
+  DISPLAY(m,r,c);
+}
