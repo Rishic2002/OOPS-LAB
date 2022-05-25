@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+class HELLO {
+   private:
+   int num1, num2;
+   public:
+   HELLO(int n1, int n2) {
+      cout<<"CONSTRUCTOR HERE!!!"<<endl;
+      num1 = n1;
+      num2 = n2;
+   }
+   void display() {
+      cout<<"Number 1 = "<< num1 <<endl;
+      cout<<"Number 2 = "<< num2 <<endl;
+   }
+   ~HELLO() {
+      cout<<"DESTRUCTOR HERE!!!";
+   }
+};
+int main() {
+   HELLO obj1(10, 20);
+   obj1.display();
+   return 0;
+}
