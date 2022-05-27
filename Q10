@@ -1,47 +1,43 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
- 
-class Distance {
-   private:
-      int feet;                
-      int inches;           
-      
-   public:
-         Distance()             //CONSTRUCTORS
-      {  
-         feet = 0;
-         inches = 0;
-      }
-      Distance(int f, int i) 
-      {
-         feet = f;
-         inches = i;
-      }
-      
-      
-      void displayDistance()    //DISPLAY FUNCTION
-      {
-         cout << "FEET: " << feet << " INCHES:" << inches <<endl;
-      }
-      
-      
-      Distance operator- ()   //URARY OPERATOR 
-      { 
-         feet = -feet;
-         inches = -inches;
-         return Distance(feet, inches);
-      }
-};
 
-int main() 
+class IncreDecre
 {
-   Distance D1(11, 10), D2(-5, 11);
- 
-   -D1;                     
-   D1.displayDistance();    
-
-   -D2;                     
-   D2.displayDistance();    
-
-   return 0;
+        int a, b;
+     public:
+        void accept()
+        {
+                cout<<"\n Enter Two Numbers : \n";
+                cout<<" ";
+                cin>>a;
+                cout<<" ";
+                cin>>b;
+        }
+        void operator--()         {
+                a--;
+                b--;
+        }
+        void operator++() 
+        {
+                a++;
+                b++;
+        } 
+        void display()
+        {
+                cout<<"\n A : "<<a;
+                cout<<"\n B : "<<b;
+        }
+};
+int main()
+{
+        IncreDecre id;
+        id.accept();
+        --id;
+        cout<<"\n After Decrementing : ";
+        id.display();
+        ++id;
+        ++id;
+        cout<<"\n\n After Incrementing : ";
+        id.display();
+        return 0;
 }
